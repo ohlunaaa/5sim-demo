@@ -26,7 +26,7 @@ def buy():
     print(f"{Fore.BLUE}[{Fore.RESET}-{Fore.BLUE}]{Fore.RESET} Mail: {email} {Fore.BLUE}[{Fore.RESET}-{Fore.BLUE}]{Fore.RESET} Balance: {balance}")
     country = input(str(f"{Fore.BLUE}[{Fore.RESET}-{Fore.BLUE}]{Fore.RESET} Country: "))
     product = input(str(f"{Fore.BLUE}[{Fore.RESET}-{Fore.BLUE}]{Fore.RESET} Product: "))
-    r = requests.get(f'https://5sim.net/v1/user/buy/activation/{country}/any/{product}', headers=headers).json()
+    r = requests.get(f'https://5sim.net/v1/user/buy/activation/russia/any/instagram', headers=headers).json()
     phone_id = r["id"]
     phone_number = r["phone"]
     price = r["price"]
